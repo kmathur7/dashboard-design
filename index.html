@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head ng-init="hide=true">
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="css/flat-ui.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lte IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+      <![endif]-->
+  </head>
+  <body>
+    
+
+
+  <div class="container-fluid" ng-controller="app">
+
+
+    <div class="row">
+        
+        <div class="col-md-4">
+            
+        </div >
+        <div class="col-md-8"><h3 class="demo-headline">Network Operations & Management</h3></div>
+        
+    </div>
+    <nav class="navbar navbar-default" role="navigation">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-3">
+          <span class="sr-only">Toggle navigation</span>
+      </button>
+      
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="navbar-collapse-3">
+    <ul class="nav navbar-nav">           
+      <li class="active dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Modify Subscriber<b class="caret"></b></a>
+            <span class="dropdown-arrow"></span>
+            <ul class="dropdown-menu">
+                <li><a href="#">Suspension</a></li>
+                <li><a href="#">Unlock</a></li>
+            </ul>
+      </li>
+      <li><a href="#">Termination</a></li>
+      <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Miscellaneous<b class="caret"></b></a>
+            <span class="dropdown-arrow"></span>
+            <ul class="dropdown-menu">
+                <li><a href="#">240 dialing</a></li>
+                <li><a href="#">Internation dialing</a></li>
+                <li><a href="#">Call waiting</a></li>
+                <li><a href="#">Call forwarding</a></li>
+                <li><a href="#">Activate/Deactivate Voicemail</a></li>
+                <li><a href="#">Creation & deletion of user and Mailbox</a></li>
+            </ul>
+      </li>
+      <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Prepaid Service<b class="caret"></b></a>
+            <span class="dropdown-arrow"></span>
+            <ul class="dropdown-menu">
+                <li><a href="#">Active period change</a></li>
+                <li><a href="#">Modify Subcriber balance</a></li>
+            </ul>
+      </li>
+      <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dashboard<b class="caret"></b></a>
+            <span class="dropdown-arrow"></span>
+            <ul class="dropdown-menu">
+                <li><a href="#">MDN Details</a></li>
+                <li><a href="#">Functionality Stats</a></li>
+            </ul>
+      </li>
+      <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Bulk services<b class="caret"></b></a>
+            <span class="dropdown-arrow"></span>
+            <ul class="dropdown-menu">
+                <li><a href="#">Provision Subscriber</a></li>
+                <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#" >Modify subscriber</a>
+                    <ul class="dropdown-menu">
+                        <li><a tabindex="-1" href="#">Suspension</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Termination</a></li>
+            </ul>
+      </li>
+      <li><a href="#">Adminstration</a></li>
+      <li><a href="#">Help</a></li>  
+  </ul>          
+  <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{user.username}}<b class="caret"></b></a>
+        <span class="dropdown-arrow"></span>
+        <ul class="dropdown-menu">
+          <li><a >Provided Access Screen names : {{user.screenname}}</a></li>
+          <li><a href="#">Role : {{user.role}}</a></li>
+          <li><a href="#">Last Logged in : {{user.lastlogin}}</a></li>
+          <li><a href="#">Duration : {{user.timelogged}}</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Logout</a></li>
+      </ul>
+  </li>
+           
+</ul>
+</div><!-- /.navbar-collapse -->
+</nav>
+
+
+    
+    <div class="row">
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <input type="text" placeholder="MDN" class="form-control" />
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <input type="text" placeholder="ESN" class="form-control" />
+         </div>
+         <div class="col-md-4 col-sm-6 col-xs-12">
+            <input type="text" placeholder="IMSI" class="form-control" />
+        </div>
+    </div>
+    <div class="row">
+        
+        <div class="col-md-2 col-md-offset-4 col-sm-6 col-xs-12 mar">
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Network Emement<span class="caret"></span></button>
+                <span class="dropdown-arrow"></span>
+                <ul class="dropdown-menu">
+                    <li><a href="#fakelink">Network Emement 1</a></li>
+                    <li><a href="#fakelink">Network Emement 2</a></li>
+                    <li><a href="#fakelink">Network Emement 3</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="col-md-2 col-sm-6 col-xs-12 mar">
+            <button class="btn btn-primary" ng-click="show=true">Query</button>
+        </div>
+        
+
+
+            
+                
+        
+    </div>
+
+   
+
+    
+    
+
+    <div class="row">
+         <div class="col-md-4 col-sm-6 col-xs-12" ng-show="show">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                    <h3 class="panel-title">Network Provisioning Info</h3>
+                </div>
+                <div class="panel-body paneltext">Variable Voice (8kbps)<span class="pan1">{{network.VariableVoice}}</span></div>
+                <div class="panel-body paneltext">High Rate Voice Service (13kbps)<span class="pan2">{{network.HighRate}}</span></div>
+                <div class="panel-body paneltext">Enhanced Variable Voice (8kbps)<span class="pan3">{{network.EnhancedVariable}}</span></div>
+                <div class="panel-body paneltext">Voice Service (13kbps)<span class="pan4">{{network.VoiceService}}</span></div>
+                <div class="panel-body paneltext">Status<span class="pan5">{{network.Status}}</span></div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12" ng-show="show">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Ideal All Network Element Provisioning</h3>
+                </div>
+              <div class="panel-body paneltext">Variable Voice (8kbps)<span class="pan1">{{network.VariableVoice}}</span></div>
+                <div class="panel-body paneltext">High Rate Voice Service (13kbps)<span class="pan2">{{network.HighRate}}</span></div>
+                <div class="panel-body paneltext">Enhanced Variable Voice (8kbps)<span class="pan3">{{network.EnhancedVariable}}</span></div>
+                <div class="panel-body paneltext">Voice Service (13kbps)<span class="pan4">{{network.VoiceService}}</span></div>
+                <div class="panel-body paneltext">Status<span class="pan5">{{network.Status1}}</span></div>
+            </div>
+            
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12" ng-show="show">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">CRM Details</h3>
+                </div>
+              <div class="panel-body panelcrm">Customer ID : {{crm.custid}}</div>
+                <div class="panel-body panelcrm">Account ID :{{crm.accid}}</div>
+                <div class="panel-body panelcrm">MDN :{{crm.MDN}}</div>
+                <div class="panel-body panelcrm">ESN :{{crm.ESN}}</div>
+                <div class="panel-body panelcrm">IMSI :{{crm.IMSI}}</div>
+                <div class="panel-body panelcrm">Package Name:{{crm.packagename}}</div>
+                <div class="panel-body panelcrm">Activation Date :{{crm.actdate}}</div>
+                <div class="panel-body panelcrm">Contact Number :{{crm.contactno}}</div>
+                <div class="panel-body panelcrm">Email :{{crm.email}}</div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="row" ng-show="show">
+        <div class="col-md-4 col-sm-6 col-xs-12"></div>
+        <div class="col-md-4 col-sm-6 col-xs-12" ng-show={{disable}}>
+             <input type="text" placeholder="SR/Incident No" class="form-control" />
+             <textarea placeholder="Remarks" class="form-control"></textarea>
+             <button class="btn btn-primary">Action</button>
+        </div >
+        
+       
+    </div>
+    
+   
+
+</div>
+
+
+
+
+<!-- Load JS here for greater good =============================-->
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-select.js"></script>
+<script src="js/bootstrap-switch.js"></script>
+<script src="js/flatui-checkbox.js"></script>
+<script src="js/flatui-radio.js"></script>
+<script src="js/jquery.tagsinput.js"></script>
+<script src="js/jquery.placeholder.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
